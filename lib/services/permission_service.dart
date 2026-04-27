@@ -13,6 +13,7 @@ class PermissionService {
         Permission.photos,
         Permission.videos,
         Permission.storage,
+        Permission.notification,
       ].request();
     } catch (_) {
       // ignore — beberapa platform (web/desktop) tidak support

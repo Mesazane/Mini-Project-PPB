@@ -9,6 +9,7 @@ import 'providers/locale_provider.dart';
 import 'providers/theme_provider.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/home_screen.dart';
+import 'services/notification_service.dart';
 import 'services/permission_service.dart';
 
 Future<void> main() async {
@@ -16,8 +17,11 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  // Request akses media di awal — non-blocking, app tetap jalan walau user deny.
-  // Tunggu sebentar supaya UI sempat render dulu.
+
+  // Init notifikasi lokal (channel + minta izin Android 13+).
+  await NotificationService.init();
+
+  // Request akses media di awal — non-blocking.
   Future.delayed(const Duration(milliseconds: 500), () {
     PermissionService.requestAtStartup();
   });

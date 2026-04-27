@@ -17,6 +17,7 @@ import '../services/auth_service.dart';
 import '../services/document_service.dart';
 import '../services/file_service.dart';
 import '../services/folder_service.dart';
+import '../services/notification_service.dart';
 import '../utils/app_strings.dart';
 
 class DocumentFormScreen extends StatefulWidget {
@@ -380,6 +381,12 @@ class _DocumentFormScreenState extends State<DocumentFormScreen> {
           metadata: _pendingMetadata,
         );
         await _docService.addDocument(newItem);
+
+        // Notifikasi sistem — hanya saat CREATE (bukan EDIT)
+        await NotificationService.showUploadSuccess(
+          title: newItem.title,
+          fileName: newItem.fileName,
+        );
       }
 
       if (!mounted) return;
