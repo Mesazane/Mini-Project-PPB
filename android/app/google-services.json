@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1086776672640",
+    "project_id": "documtrack",
+    "storage_bucket": "documtrack.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086776672640:android:8d219b45226ee41d6e0165",
+        "android_client_info": {
+          "package_name": "com.example.tugas_6"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhG_ZakvK8vwLc-AiQUnDI6WDcIrjNsvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

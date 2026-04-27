@@ -1,0 +1,48 @@
+name: tugas_6
+description: "DocumTracker - Aplikasi dokumentasi dengan CRUD, Firebase Auth & Storage."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Firebase (Auth + Firestore saja)
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+
+  # Media (di-encode base64 lalu disimpan di Firestore)
+  image_picker: ^1.1.2     # untuk camera (pickImage / pickVideo dari camera)
+  file_picker: ^8.1.4      # untuk gallery (preserve nama file asli)
+  video_player: ^2.9.2
+  saver_gallery: ^4.0.1
+  path_provider: ^2.1.4
+  permission_handler: ^11.3.1
+  http: ^1.2.2
+
+  # State management
+  provider: ^6.1.2
+
+  # Utility
+  intl: ^0.20.2
+  path: ^1.9.0
+  exif: ^3.3.0
+  image: ^4.1.7
+  native_exif: ^0.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
